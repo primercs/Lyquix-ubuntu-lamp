@@ -59,7 +59,7 @@ apt-get -y update
 printf "Upgrade installed packages...\n"
 apt-get -y upgrade
 printf "Install utilities...\n"
-PCKGS=("curl" "vim" "openssl" "git" "htop" "nload" "nethogs" "zip" "unzip" "sendmail" "sendmail-bin" "libcurl3-openssl-dev" "psmisc" "build-essential" "zlib1g-dev" "libpcre3" "libpcre3-dev" "memcached" "fail2ban" "iptables-persistent" "software-properties-common")
+PCKGS=("curl" "vim" "openssl" "git" "dos2unix" "iftop" "screen" "perl" "bc" "ca-certificates" "git" "software-properties-common" "mtr" "wget" "htop" "nload" "nethogs" "zip" "unzip" "libcurl3-openssl-dev" "psmisc" "build-essential" "zlib1g-dev" "libpcre3" "libpcre3-dev" "memcached" "fail2ban" "iptables-persistent" "software-properties-common")
 for PCKG in "${PCKGS[@]}"
 do
 	apt-get -y install ${PCKG}
@@ -71,7 +71,8 @@ do
 	apt-get -y install ${PCKG}
 done
 printf "Install PHP...\n"
-PCKGS=("mcrypt" "imagemagick" "php7.4" "php7.4-common" "php7.4-gd" "php7.4-imap" "php7.4-mysql" "php7.4-mysqli" "php7.4-cli" "php7.4-cgi" "php7.4-zip" "php-pear" "php-imagick" "php7.4-curl" "php7.4-mbstring" "php7.4-bcmath" "php7.4-xml" "php7.4-soap" "php7.4-opcache" "php7.4-intl" "php-apcu" "php-mail" "php-mail-mime" "php-all-dev" "php7.4-dev" "libapache2-mod-php7.4" "php7.4-memcached" "php-auth" "php-mcrypt" "composer")
+PCKGS=("mcrypt" "imagemagick" "php7.4" "php7.4-common" "php7.4-gd" "php7.4-imap" "php7.4-mysql" "php7.4-mysqli""php7.4-cli" "php7.4-cgi" "php7.4-zip" "php-pear" "php-imagick" "php7.4-ssh2" "php7.4-curl" "php7.4-mbstring" "php7.4-bcmath" "php7.4-xml" "php7.4-soap" "php7.4-opcache" "php7.4-intl" "php-apcu" "php-mail" "php-mail-mime" "php-all-dev" "php7.4-dev" "libapache2-mod-php7.4" "php7.4-memcached" "php-auth" "php-mcrypt" "composer")
+
 for PCKG in "${PCKGS[@]}"
 do
 	apt-get -y install ${PCKG}
@@ -364,7 +365,7 @@ printf "php.ini: $REPLACE\n"
 perl -pi -e "s/$FIND/$REPLACE/m" /etc/php/7.4/apache2/php.ini
 
 FIND="^\s*upload_max_filesize\s*=\s*.*"
-REPLACE="upload_max_filesize = 20M"
+REPLACE="upload_max_filesize = 2000M"
 printf "php.ini: $REPLACE\n"
 perl -pi -e "s/$FIND/$REPLACE/m" /etc/php/7.4/apache2/php.ini
 
