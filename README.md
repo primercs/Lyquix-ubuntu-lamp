@@ -7,7 +7,7 @@ Current version: `lamp-ubuntu20.sh`
 ## How to use
 
   * Log in to your fresh Ubuntu server as root
-  * Download the most recent version of the script: `wget https://raw.githubusercontent.com/Lyquix/ubuntu-lamp/master/lamp-ubuntu20.sh`
+  * Download the most recent version of the script: `wget https://github.com/primercs/Lyquix-ubuntu-lamp/edit/master/lamp-ubuntu20.sh`
   * Change permissions: `chmod 755 lamp-ubuntu20.sh`
   * Run and follow prompts: `./lamp-ubuntu20.sh`
 
@@ -75,6 +75,7 @@ Current version: `lamp-ubuntu20.sh`
     * php-auth
     * php-mcrypt
     * php-imagick
+    * php-ssh2
     * php7.4-curl
     * php7.4-mbstring
     * php7.4-bcmath
@@ -160,7 +161,7 @@ memory_limit = 256M
 error_reporting = E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
 log_errors_max_len = 0
 post_max_size = 20M
-upload_max_filesize = 20M
+upload_max_filesize = 2000M
 ```
 
 ## MySQL Configuration
