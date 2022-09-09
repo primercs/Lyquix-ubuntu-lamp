@@ -4,12 +4,25 @@ Bash scripts to automatically setup LAMP server following best practices.
 
 Current version: `lamp-ubuntu20.sh`
 
-## How to use
+## Instalação
 
-  * Log in to your fresh Ubuntu server as root
-  * Download the most recent version of the script: `wget https://github.com/primercs/Lyquix-ubuntu-lamp/edit/master/lamp-ubuntu20.sh`
-  * Change permissions: `chmod 755 lamp-ubuntu20.sh`
-  * Run and follow prompts: `./lamp-ubuntu20.sh`
+Inicie atualizando o sistema e depois baixando o repositório:
+
+```bash
+
+sudo apt-get update; sudo apt-get -y upgrade;
+#   Get the repo
+
+sudo git clone https://github.com/primercs/Lyquix-ubuntu-lamp.git;
+cd /root/Lyquix-ubuntu-lamp/;
+sudo chmod +x ./*.sh;
+
+#   Escolha Seu Sistema Operacional:
+
+./lamp-ubuntu16.sh;
+./lamp-ubuntu18.sh;
+./lamp-ubuntu20.sh;
+```
 
 ## What does this script do?
 
